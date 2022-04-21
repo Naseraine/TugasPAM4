@@ -25,10 +25,10 @@ function ListItem({ data }) {
   }
 
   async function handleDeleteContact(){
-    Alert.alert('Alerta', 'Deseja mesmo apagar esse contato?', [
-      { text: 'Não', style: 'cancel' },
+    Alert.alert('Peringatan', 'Apakah Anda Ingin Menghapus Kontak Ini?', [
+      { text: 'Tidak', style: 'cancel' },
       {
-          text: 'Sim', onPress: async () => {
+          text: 'Ya', onPress: async () => {
             await Contacts.removeContactAsync(data.id)
           }
       },
@@ -39,7 +39,7 @@ function ListItem({ data }) {
     return (
       <View>
               <TouchableOpacity style={styles.buttonDelete} onPress={handleDeleteContact}>
-                  <Text style={styles.textButtonDelete}>Deletar</Text>
+                  <Text style={styles.textButtonDelete}>Hapus</Text>
               </TouchableOpacity>
       </View>
 
@@ -53,8 +53,8 @@ function ListItem({ data }) {
         onPress={handleNavigation}
       >
         <View style={styles.divInfo}>
-          <Text style={styles.text}>Nome: {name}</Text>
-          <Text style={styles.text}>Numero: {number} </Text>
+          <Text style={styles.text}>Nama: {name}</Text>
+          <Text style={styles.text}>Nomor: {number} </Text>
         </View>
       </TouchableOpacity>
       </Swipeable>

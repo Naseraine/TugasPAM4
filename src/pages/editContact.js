@@ -41,21 +41,21 @@ export default function ListContact() {
       
       const newData = await Contacts.updateContactAsync(contact);
 
-      Alert.alert('Alterado com sucesso')
+      Alert.alert('Berhasil Diubah')
   }
 
   return (
     <SafeAreaView style={styles.screen}>
-      <Text style={styles.textInformativo}>Editar Contato</Text>
+      <Text style={styles.textInformativo}>Edit Kontak</Text>
       <View style={styles.form}>
-        <Text>Nome: </Text>
+        <Text>Nama: </Text>
         <TextInput
           style={styles.input}
           onChangeText={(value) => setName(value)}
         >
           {name}
         </TextInput>
-        <Text>Numero: </Text>
+        <Text>Nomor: </Text>
         <TextInput
           style={styles.input}
           onChangeText={(value) => setNumber(value)}
@@ -67,13 +67,13 @@ export default function ListContact() {
         <TouchableOpacity style={styles.btnConfirm}
             onPress={handleAlterContact}
         >
-          <Text style={styles.btnTextConfirm}>Salvar Alterações</Text>
+          <Text style={styles.btnTextConfirm}>Menyimpan</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.btnVoltar}
           onPress={()=> navigation.reset({routes: [{ name: "ListContact" }]})}
         >
-          <Text style={styles.btnTextVoltar}>Voltar</Text>
+          <Text style={styles.btnTextVoltar}>Kembali</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

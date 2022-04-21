@@ -28,23 +28,23 @@ export default function NewContact() {
       
       const newData = await Contacts.addContactAsync(contact);
 
-      Alert.alert('Adicionado com sucesso')
+      Alert.alert('Berhasil Ditambahkan')
       setName(null)
       setNumber(null)
   }
 
   return (
     <SafeAreaView style={styles.screen}>
-      <Text style={styles.textInformativo}>Adicionar Novo Contato</Text>
+      <Text style={styles.textInformativo}>Tambahkan Kontak Baru</Text>
       <View style={styles.form}>
-        <Text>Nome: </Text>
+        <Text>Nama: </Text>
         <TextInput
           style={styles.input}
           onChangeText={(value) => setName(value)}
         >
           {name}
         </TextInput>
-        <Text>Numero: </Text>
+        <Text>Nomor: </Text>
         <TextInput
           style={styles.input}
           onChangeText={(value) => setNumber(value)}
@@ -56,13 +56,13 @@ export default function NewContact() {
         <TouchableOpacity style={styles.btnConfirm}
             onPress={handleNewContact}
         >
-          <Text style={styles.btnTextConfirm}>Adicionar</Text>
+          <Text style={styles.btnTextConfirm}>Tambah</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.btnVoltar}
           onPress={()=>navigation.reset({routes: [{ name: "ListContact" }]})}
         >
-          <Text style={styles.btnTextVoltar}>Voltar</Text>
+          <Text style={styles.btnTextVoltar}>Kembali</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

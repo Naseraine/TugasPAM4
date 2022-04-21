@@ -61,7 +61,7 @@ export default function ListContact() {
     setSearch(true)
     
     if(id === null)
-      return Alert.alert('Contato não existe!')
+      return Alert.alert('Kontak Tidak Ada!')
 
       const data = await Contacts.getContactByIdAsync(id);
 
@@ -71,10 +71,10 @@ export default function ListContact() {
   return (
     <SafeAreaView style={styles.screen}>
     <Text style={styles.textInformativo}>
-      Listagem de Contatos
+      List Daftar Kontak
     </Text>
     <Text style={styles.textInformativoAcao}>
-      Clique para alterar ou arraste para excluir
+      Klik untuk mengubah atau Seret untuk menghapus
     </Text>
     <TouchableOpacity style = {styles.icon} 
     onPress={()=>navigation.reset({routes: [{ name: "NewContact" }]})}
@@ -82,7 +82,7 @@ export default function ListContact() {
     <AntDesign name="pluscircle" size={30} color="black" />
     </TouchableOpacity>
     <View style={styles.form}>
-        <Text>Nome: </Text>
+        <Text>Nama: </Text>
         <TextInput
           style={styles.input}
           onChangeText={(value) => setName(value)}
